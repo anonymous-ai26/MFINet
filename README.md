@@ -2,17 +2,6 @@
 
 MFINet is a real-time LiDAR semantic segmentation network based on multi-view fusion and 2D-3D interaction enhancement. It integrates 3D Point View (3D-PV), 2D Bird's Eye View (2D-BEV), and 2D Range View (2D-RV) to make full use of complementary 3D and 2D representations.
 
-## Method Overview
-
-MFINet contains four main components:
-
-- **3D Point Feature Projector (3DPFP)**: projects point-wise 3D features into BEV and RV pseudo-images through voxel/grid pooling.
-- **Feature Enhancement (FE)**: samples BEV/RV 2D features back to points to enhance point-wise geometric and semantic representation.
-- **2D-3D Fusion Head (FH)**: aggregates point features from 3D-PV, 2D-BEV, and 2D-RV for final point-wise prediction.
-- **Multi-Scale Dilated Attention (MSDA)**: enhances BEV/RV feature discrimination with local sliding-window dilated attention.
-
-
-
 ## Environment Setup
 
 Install the required Python packages and compile the CUDA extension in `deep_point` before training.
