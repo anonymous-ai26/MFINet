@@ -11,18 +11,7 @@ MFINet contains four main components:
 - **2D-3D Fusion Head (FH)**: aggregates point features from 3D-PV, 2D-BEV, and 2D-RV for final point-wise prediction.
 - **Multi-Scale Dilated Attention (MSDA)**: enhances BEV/RV feature discrimination with local sliding-window dilated attention.
 
-## Project Structure
 
-```text
-config/mfinet.py        MFINet training configuration
-models/mfinet.py        Main MFINet model
-networks/bird_view.py   BEV branch with MSDA and attention decoder
-networks/range_view.py  RV branch with MSDA and attention decoder
-networks/backbone.py    Basic blocks, point MLPs, fusion layers, and sampling layers
-datasets/               SemanticKITTI dataset loader and preprocessing utilities
-utils/                  Losses, metrics, logger, and optimizer/scheduler builder
-deep_point/             CUDA extension for point-to-grid voxel pooling
-```
 
 ## Environment Setup
 
