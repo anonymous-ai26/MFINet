@@ -91,23 +91,4 @@ def get_config():
             step = 10
             decay_factor = 0.1
 
-
-    # class OptimizeParam:
-    #     class optimizer:
-    #         type = "adam"
-    #         # base_lr = 0.005
-    #         base_lr = 0.006
-    #         momentum = 0.9
-    #         nesterov = True
-    #         wd = 1e-3
-    #
-    #     class schedule:
-    #         type = "OneCycle"
-    #         begin_epoch = 0
-    #         end_epoch = 60
-    #         pct_start = 0.3
-    #         final_lr = 1e-6
-    #         step = 10
-    #         decay_factor = 0.1
-
     return General, DatasetParam, ModelParam, OptimizeParam
