@@ -9,7 +9,6 @@ def get_config():
                       "other-vehicle", "person", "bicyclist", "motorcyclist", "road",
                       "parking", "sidewalk", "other-ground", "building", "fence",
                       "vegetation", "trunk", "terrain", "pole", "traffic-sign"]
-        # loss_mode = 'wce'
         loss_mode = 'ohem'
         class Voxel:
             RV_theta = (-25.0, 3.0)
@@ -61,14 +60,12 @@ def get_config():
             base_block = 'BasicBlock'
             context_layers = [64, 32, 64, 128]
             layers = [2, 3, 4]
-            # bev_grid2point = dict(type='BilinearSample', scale_rate=(0.5, 0.5))
             bev_grid2point = dict(type='BilinearSample', scale_rate=(1.0, 1.0))
 
         class RVParam:
             base_block = 'BasicBlock'
             context_layers = [64, 32, 64, 128]
             layers = [2, 3, 4]
-            # rv_grid2point = dict(type='BilinearSample', scale_rate=(1.0, 0.5))
             rv_grid2point = dict(type='BilinearSample', scale_rate=(1.0, 1.0))
 
         class pretrain:
